@@ -5,28 +5,26 @@
 **Version**: 1.0.0 Changes to first creation of the API.
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+This repo is structred to be a back end API that will feed infroamtion to the front end of another repo.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+With making this application you will need to be able to have access to a couple different things like a json file as well as making an API key to attach to the backend. 
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+Ended up using VSCode, Netifly, GitHub, Weather io API,
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+**08/11/21** Made changes to the overall site to call upon the server js from the front end.
 
 ## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+Readme on the the actual city-explorer has all help that was with these labs. 
 
 Name of feature: City Explorer API
 
-Estimate of time needed to complete: 3 hours
+Estimate of time needed to complete: 4 hours
 
-Start time: 5:40pm
+Start time: 08/02 5:40pm
 
-Finish time: TBD
+Finish time: 08/07 5:35pm
 
-Actual time needed to complete: N/A
+Actual time needed to complete: several days

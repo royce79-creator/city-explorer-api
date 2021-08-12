@@ -28,21 +28,25 @@ app.get('/weather', (request, response) => {
   console.log('Search: ', searchCity);
   // let lat = parseInt(request.query.lat);
   // let lon = parseInt(request.query.lon);
-  let cityFound = weatherData.find(city => city.city_name.toUpperCase() === searchCity.toUpperCase());
-  console.log('city found: ', cityFound);
-  let forecastArray = [];
+  try {
+    let cityFound = weatherData.find(city => city.city_name.toUpperCase() === searchCity.toUpperCase());
+    console.log('city found: ', cityFound);
+    let forecastArray = [];
 
-  if (cityFound) {
-    cityFound.data.forEach(cityParam => forecastArray.push(new Forecast(`The low of ${cityParam.low_temp}, the high of ${cityParam.high_temp} additionally ${cityParam.weather.description}`, cityParam.valid_date)));
-    console.log(forecastArray);
-    response.send(forecastArray);
-  } else {
-    response.status(500).send('Not getting through');
+    if (cityFound) {
+      cityFound.data.forEach(cityParam => forecastArray.push(new Forecast(`The low of ${cityParam.low_temp}, the high of ${cityParam.high_temp} additionally ${cityParam.weather.description}`, cityParam.valid_date)));
+      console.log(forecastArray);
+      response.send(forecastArray);
+    } else {
+      response.status(500).send('Not getting through');
+    }
+  } catch (error) {
+    response.status(500).send(error);
   }
 });
 
 app.get('/*', (request, response) => {
-  response.status(404).send('Having some issues!');
+  response.status(404).send('Route does not exist!');
 });
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
